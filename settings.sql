@@ -1,0 +1,3 @@
+CREATE DATABASE nostaldja;
+CREATE USER firstuser WITH PASSWORD 'user';
+GRANT ALL PRIVILEGES ON DATABASE nostaldja TO firstuser;
