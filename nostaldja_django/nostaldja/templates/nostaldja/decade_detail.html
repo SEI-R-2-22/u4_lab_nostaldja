@@ -1,11 +1,12 @@
 <!-- nostaldja/templates/nostaldja/decade_detail.html -->
 {% extends 'nostaldja/base.html' %} {% block content %}
-<h2>{{ decade_list.start_year }} <a href="">(edit)</a></h2>
+<h2>{{ decade.year_start }} <a href="">(edit)</a></h2>
 
+<h3>Fads <a href="">(+)</a></h3>
 <ul>
-  {% for decade in Decades.all %}
+  {% for fad in decade.fads.all %}
   <li>
-    <a href="">{{ song.title }}-{{ song.album }}</a>
+    <a href="{% url 'fad_detail' pk=fad.pk %}">{{ fad.name }}</a>
   </li>
   {% endfor %}
 </ul>

@@ -1,4 +1,16 @@
+<!-- nostaldja/templates/nostaldja/fad_detail.html -->
 {% extends 'nostaldja/base.html' %} {% block content %}
+<h2>{{ decade.year_start }} <a href="">(edit)</a></h2>
+<img src="{{ fad.image_url }}" alt="" class="fad-photo" />
+<h3>Name: {{ fad.name }}</h3>
+<p>Description: {{fad.description}}</p>
+<!-- {% for fad in fads.all %}
 
-
+<ul>
+  <li> 
+    <a href="{% url 'fad_detail' pk=fad.pk %}">{{ fad.name }}</a>
+    <p>{{ fad.description }}</p> 
+  </li>
+  {% endfor %} -->
+</ul>
 {% endblock %}
