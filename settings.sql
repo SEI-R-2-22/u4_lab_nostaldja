@@ -1,0 +1,3 @@
+CREATE DATABASE nostaldja;
+CREATE USER piero WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE nostaldja TO piero;
