@@ -1,0 +1,16 @@
+<!-- nostaldja/templates/nostaldja/decade_detail.html -->
+{% extends 'tunr/base.html' %} {% block content %}
+<h2>{{ decade_list.start_year }} <a href="">(edit)</a></h2>
+
+
+
+
+
+<ul>
+  {% for decade in artist.songs.all %}
+  <li>
+    <a href="">{{ song.title }}-{{ song.album }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
