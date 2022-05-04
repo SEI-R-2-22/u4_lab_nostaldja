@@ -2,7 +2,13 @@
 
 <div>
   <h2><a href="{% url 'decade_edit' pk=decade.pk %}">{{decade.start_year}}</a></h2>
-  <h2>{{decade.fad.name}}</h2>
+
+  <div>
+    {% for fad in decade.fads.all %}
+    <p><a href="{% url 'fad_display_detail' pk=fad.pk %}">{{ fad.name }}</a></p>
+
+    {% endfor %}
+  </div>
 
   <a href="{% url 'decade_delete' pk=decade.pk %}">delete</a>
 </div>

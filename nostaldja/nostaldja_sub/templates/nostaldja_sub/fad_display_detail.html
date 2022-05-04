@@ -3,7 +3,7 @@
 <div>
     <h2>{{fad.name}}</h2>
     <p>{{fad.description}}</p>
-    <p>{{fad.decade}}</a></p>
+    <p>{{fad.decade.start_year}}</a></p>
     <img src='{{fad.image_url}}' alt="img">
 
     <h2><a href="{% url 'fad_edit' pk=fad.pk %}">Edit: {{fad.name}}</a></h2>
