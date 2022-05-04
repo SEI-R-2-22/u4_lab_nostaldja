@@ -1,0 +1,4 @@
+-- settings.sql
+CREATE DATABASE nost;
+CREATE USER nostuser WITH PASSWORD 'nost';
+GRANT ALL PRIVILEGES ON DATABASE nost TO nostuser;
