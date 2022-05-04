@@ -1,0 +1,8 @@
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h1>Post New Decade</h1>
+
+<form method="POST" class="decade-form">
+{% csrf_token %} {{ form.as_p }}
+<button type="submit" >Save</button>
+</form>
+{% endblock %}
