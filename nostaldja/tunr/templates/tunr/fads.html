@@ -1,0 +1,10 @@
+{% extends 'tunr/base.html' %} {% block content %}
+<h2>Fads <a href="{% url 'fads_new' %}">(+)</a></h2>
+<ul>
+  {% for fad in fads %}
+  <li>
+    <a href="{% url 'fads_edit' pk=fad.pk %}">{{ fad.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
