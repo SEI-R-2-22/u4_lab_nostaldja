@@ -38,6 +38,11 @@ def fad_edit(request, pk):
     return render(request, 'nostaldja_sub/fad_form.html', {'form': form})
 
 
+def fad_delete(request, pk):
+    Fad.objects.get(id=pk).delete()
+    return redirect('fad_display_all')
+
+
 def decade_display_all(request):
     decades = Decade.objects.all()
     return render(request, 'nostaldja_sub/decade_display_all.html', {'decades': decades})
@@ -69,3 +74,8 @@ def decade_edit(request, pk):
     else:
         form = FadForm(instance=decade)
     return render(request, 'nostaldja_sub/decade_form.html', {'form': form})
+
+
+def decade_delete(request, pk):
+    Decade.objects.get(id=pk).delete()
+    return redirect('decade_display_all')
