@@ -3,7 +3,7 @@
 <h2>{{ decade_list.start_year }} <a href="">(edit)</a></h2>
 <h3>Decades:</h3>
 <ul>
-  {% for decade in decade_list %}
+  {% for decade in decades %}
   <li>
     <a href="{% url 'decade_detail' pk=decade.id %}">{{ decade.start_year }}</a>
   </li>
