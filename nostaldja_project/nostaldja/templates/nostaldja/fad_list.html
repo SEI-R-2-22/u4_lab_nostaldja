@@ -1,0 +1,9 @@
+<!-- tunr/templates/tunr/artist_list.html -->
+<h2>Fads <a href="">(+)</a></h2>
+<ul>
+    {% for fad in fads %}
+    <li>
+        <a href="">{{ fad.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
