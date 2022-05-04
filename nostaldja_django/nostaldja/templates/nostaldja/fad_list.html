@@ -1,0 +1,12 @@
+<!-- nostaldja/templates/nostaldja/fad_list.html -->
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h2>{{ fad_list.name }} <a href="">(edit)</a></h2>
+<h3>Fads:</h3>
+<ul>
+  {% for fad in fads %}
+  <li>
+    <a href="{% url 'fad_detail' pk=fad.id %}">{{ fad.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
