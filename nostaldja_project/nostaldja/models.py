@@ -4,11 +4,12 @@ from django.db import models
 
 
 class Decade(models.Model):
-    start_year = models.IntegerField()
+    start_year = models.CharField(max_length=10)
 
 
 class Fad(models.Model):
     name = models.CharField(max_length=50)
     image_url = models.TextField()
     description = models.TextField()
-    decade = models.CharField(max_length=10)
+    decade = models.ForeignKey(
+        Decade, on_delete=models.CASCADE, related_name='fads')
