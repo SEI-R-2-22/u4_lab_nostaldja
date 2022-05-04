@@ -1,16 +1,16 @@
 {% extends 'nostaldja/base.html' %} {% block content %}
-<h2>{{ artist.name }} <a href="">(edit)</a></h2>
-<h4>{{ artist.nationality }}</h4>
-
-<img src="{{ artist.photo_url }}" alt="" class="artist-photo" />
-
-<h3>Songs <a href="">(+)</a></h3>
+<h2>{{ decade.start_year }}</h2>
+<a href="{% url 'decade_update' pk=decade.pk %}">Update</a>
+<a href="{% url 'decade_delete' pk=decade.pk %}">Delete</a>
+<h3>Fads <a href="">(+)</a></h3>
 <ul>
-  {% for song in artist.songs.all %}
+  {% for fad in decade.fads.all %}
   <li>
-    <a href="{% url 'song_detail' pk=song.pk %}">
-        {{ song.title }}-{{ song.album }}
-      </a>
+    <a href="{% url 'fad_detail' pk=fad.pk %}">
+        {{ fad.name}}
+    </a>
+    <img src="{{fad.image_url}}" alt="fad img" />
+    <p>{{fad.description}}</p>
   </li>
   {% endfor %}
 </ul>
