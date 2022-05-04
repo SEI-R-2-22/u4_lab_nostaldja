@@ -1,0 +1,8 @@
+ines (6 sloc)  261 Bytes
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h2>{{ fad.name}} <a href="{% url 'fad_edit' pk=fad.pk %}">(edit)</a></h2>
+<h3>Description: {{ fad.description }}</h3>
+<h3>Decade: {{ fad.decade }]</h3>
+<img src="{{ fad.image_url }}" alt="" />
+<a href="{% url 'fad_delete' pk=fad.pk %}">Delete</a>
+{% endblock %}

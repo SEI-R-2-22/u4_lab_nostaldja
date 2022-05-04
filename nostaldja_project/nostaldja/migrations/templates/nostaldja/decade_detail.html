@@ -1,0 +1,14 @@
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h2>{{ detail.start_year }} <a href="{% url 'detail_edit' pk=detail.pk %}">(edit)</a></h2>
+
+<a href="{% url 'detail_delete' pk=detail.pk %}">Delete</a>
+
+<h3>Fads <a href="{% url 'fad_create' %}">(+)</a></h3>
+<ul>
+  {% for fad in detail.fads.all %}
+  <li>
+    <a href="{% url 'fad_detail' pk=fad.pk %}">{{ fad.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
