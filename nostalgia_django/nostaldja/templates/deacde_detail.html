@@ -1,0 +1,14 @@
+{% extends 'nostaldja/base.html' %} {% block content %}
+<h2>Decade Details </h2>
+<div>
+{% for decade in decades %}
+
+<h4>{{ decade.name }}</h4>
+<div>{{ decade.description }}</div>
+<div>{{ decade.decade }}</div>
+
+<img src="{{ decade.imageUrl }}" alt=""  />
+
+{% endfor %}
+</div>
+{% endblock %}
