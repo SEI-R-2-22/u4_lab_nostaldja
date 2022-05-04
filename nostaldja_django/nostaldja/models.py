@@ -14,3 +14,6 @@ class Fad(models.Model):
     description = models.CharField(max_length=500)
     decade = models.ForeignKey(
         Decade, on_delete=models.CASCADE, related_name='fads')
+
+    def __str__(self):
+        return self.name
