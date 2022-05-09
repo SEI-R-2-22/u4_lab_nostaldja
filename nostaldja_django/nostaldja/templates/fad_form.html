@@ -1,0 +1,9 @@
+{% extends 'nostaldja/base.hmtl' %}
+
+<h2>New Fad</h2>
+<form method="POST" class="FadsForm">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="save btn btn-default">Save</button>
+</form>
+
+{% endblock %}

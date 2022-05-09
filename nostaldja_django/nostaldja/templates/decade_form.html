@@ -1,0 +1,7 @@
+{% extends 'nostaldja/base.html' %}
+
+<h1>Edit Decade</h1>
+<form method="POST" class="DecadeForm">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="ave btn btn-default">Save</button>
+</form>

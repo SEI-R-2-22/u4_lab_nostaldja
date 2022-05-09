@@ -1,0 +1,15 @@
+{% extends 'nostaldja/base.hmtl' %}
+
+<h1>
+  <a href="{% url 'decade_detail' pk=decade.pk %}">
+  {{fad.name}}
+  </a>
+</h1>
+
+<h3>{{fad.decade}}</h3>
+
+<img src="{{fad.image_url}}" alt="" />
+
+<p>
+  {{fad.description}}
+</p>

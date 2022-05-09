@@ -1,0 +1,11 @@
+{% extends 'nostaldja/base.hmtl' %}
+
+<h2>Decades</h2>
+<ul>
+  {% for decade in decades %}
+  <li>
+    {{ decade.start_year }}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
